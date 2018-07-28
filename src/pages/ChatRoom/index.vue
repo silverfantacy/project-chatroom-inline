@@ -76,6 +76,8 @@ export default {
       // console.log(val)
       vm.messages = val
     })
+  },
+  computed: {
   }
 }
 </script>

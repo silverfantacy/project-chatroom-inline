@@ -7,9 +7,17 @@
     <!-- 訊息顯示區 -->
     <div class="showInfo mb-3">
       <ul class="list-group">
-        <li class="list-group-item" v-for="item in messages" :key="item.id">
-          <p class="badge badge-info mr-auto">{{ item.username }}</p>
-          <p>{{ item.message }}</p>
+        <li class="list-group-item"
+            v-for="item in messages"
+            :key="item.id">
+          <div v-if="item.username == username">
+            <p class="badge badge-primary ml-auto">{{ item.username }}</p>
+            <p class="text-right">{{ item.message }}</p>
+          </div>
+          <div v-if="item.username !== username">
+            <p class="badge badge-info mr-auto">{{ item.username }}</p>
+            <p class="text-left">{{ item.message }}</p>
+          </div>
           <p class="text-right">
             <small>{{ item.time }}</small>
           </p>

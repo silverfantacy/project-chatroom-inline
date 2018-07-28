@@ -16,9 +16,11 @@ h1 {
 }
 
 .list-group-item {
-  display: flex;
-  flex-direction: column;
-  >* {
+  > * {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
     margin: 0;
   }
   .badge {
@@ -28,7 +30,7 @@ h1 {
 
 .showInfo {
   height: 60vh;
-  overflow-y: scroll;
+  overflow-y: scroll; 
   // &::-webkit-scrollbar {
   //   display: none
   // }
