@@ -29,6 +29,11 @@ export default {
       var timestamp = Math.floor(Date.now())
       // console.log(timestamp)
 
+      // input都不能空白
+      if (!vm.tempMessage | !vm.username) {
+        return
+      }
+
       // 計算時間
       function timeStamp2String(time) {
         var datetime = new Date()
@@ -77,8 +82,7 @@ export default {
       vm.messages = val
     })
   },
-  computed: {
-  }
+  computed: {}
 }
 </script>
 
