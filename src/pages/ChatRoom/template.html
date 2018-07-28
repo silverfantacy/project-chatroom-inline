@@ -7,15 +7,14 @@
     <!-- 訊息顯示區 -->
     <div class="showInfo mb-3">
       <ul class="list-group">
-        <li class="list-group-item">
-          <p class="badge badge-info mr-auto">Nick :</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum repellendus officia provident vel iure doloribus,
-            neque ut dolorem, distinctio obcaecati quia. Non modi veniam adipisci vero consectetur, vitae ullam nesciunt!</p>
+        <li class="list-group-item" v-for="item in messages" :key="item.id">
+          <p class="badge badge-info mr-auto">{{ item.username }}</p>
+          <p>{{ item.message }}</p>
           <p class="text-right">
-            <small>2018/07/29 15:30:20</small>
+            <small>{{ item.time }}</small>
           </p>
         </li>
-        <li class="list-group-item">
+        <!--<li class="list-group-item">
           <p class="badge badge-info mr-auto">Nick :</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum repellendus officia provident vel iure doloribus,
             neque ut dolorem, distinctio obcaecati quia. Non modi veniam adipisci vero consectetur, vitae ullam nesciunt!</p>
@@ -46,7 +45,7 @@
           <p class="text-right">
             <small>2018/07/29 15:30:20</small>
           </p>
-        </li>
+        </li> -->
       </ul>
     </div>
     <!-- 資料輸入 -->
@@ -56,17 +55,20 @@
           <input type="text"
                  class="form-control"
                  id="inputName"
-                 placeholder="輸入暱稱">
+                 placeholder="輸入暱稱"
+                 v-model="username">
         </div>
         <div class="form-group col-md-6">
           <input type="text"
                  class="form-control"
                  id="inputInfo"
-                 placeholder="請輸入訊息">
+                 placeholder="請輸入訊息"
+                 v-model="tempMessage">
         </div>
         <div class="form-group col-md-2">
           <button type="submit"
-                  class="btn btn-primary w-100 font-weight-bold">送 出</button>
+                  class="btn btn-primary w-100 font-weight-bold"
+                  @click="submitMessage()">送 出</button>
         </div>
       </div>
     </form>
