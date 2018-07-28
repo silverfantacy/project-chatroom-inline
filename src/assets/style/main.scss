@@ -1,0 +1,13 @@
+@import 'utils';
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: $teal;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

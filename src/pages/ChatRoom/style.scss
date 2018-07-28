@@ -1,0 +1,35 @@
+@import "../../assets/style/_utils.scss";
+.chatRoom {
+  width: 940px;
+  min-height: 90vh;
+  background-color: $white;
+  border-radius: 5px;
+  transition: box-shadow .5s;
+  &:hover {
+    box-shadow: $gray-700 0px 5px 10px;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: $success;
+}
+
+.list-group-item {
+  display: flex;
+  flex-direction: column;
+  >* {
+    margin: 0;
+  }
+  .badge {
+    font-size: 1rem;
+  }
+}
+
+.showInfo {
+  height: 60vh;
+  overflow-y: scroll;
+  // &::-webkit-scrollbar {
+  //   display: none
+  // }
+}
