@@ -1,4 +1,5 @@
 <script>
+/* global firebase */
 let chatDataRef = firebase.database().ref('/chatData/')
 export default {
   name: 'chatRoom',
