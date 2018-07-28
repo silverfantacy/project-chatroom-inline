@@ -82,7 +82,12 @@ export default {
       vm.messages = val
     })
   },
-  computed: {}
+  computed: {},
+  updated() {
+    // 滾到最底部
+    const infoBody = document.querySelector('#js-scroll')
+    infoBody.scrollTop = infoBody.scrollHeight
+  }
 }
 </script>
 
