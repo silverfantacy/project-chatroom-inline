@@ -64,14 +64,17 @@
                  class="form-control"
                  id="inputName"
                  placeholder="輸入暱稱"
+                 maxlength="20"
                  v-model="username">
         </div>
         <div class="form-group col-md-6">
-          <input type="text"
+          <textarea type="text"
                  class="form-control"
                  id="inputInfo"
                  placeholder="請輸入訊息"
+                 maxlength="100"
                  v-model="tempMessage">
+          </textarea>
         </div>
         <div class="form-group col-md-2">
           <button type="submit"
